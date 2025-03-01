@@ -1,0 +1,7 @@
+var fruits=["Banana","Sapota","Apple","Kiwi","Orange"]
+fruits.sort()
+console.log(fruits)
+
+var scores=[12,003,9,18,16]
+let val=scores.sort((a,b)=>a-b)
+console.log(val)
