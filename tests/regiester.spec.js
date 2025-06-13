@@ -119,6 +119,7 @@ test('Handling multiple tabs', async({browser})=>{
     console.log('--->'+ await page.locator('#username').textContent());
 
     await newPage2.goto('https://www.google.com/');
+    // 
     // await page.pause();
 
 })

@@ -1,5 +1,6 @@
 const {test}=require('@playwright/test');
 
+test.describe("navigation", ()=>{
 test('Playwright special locators', async({page})=>{
     await page.goto("https://rahulshettyacademy.com/angularpractice/");
 
@@ -10,6 +11,5 @@ test('Playwright special locators', async({page})=>{
     await page.getByText(" The Form has been submitted successfully!.").isVisible();
     await page.getByRole("link", {name:"Shop"}).click();
     await page.locator("app-card").filter({hasText:"Nokia Edge"}).getByRole("button").click();
-
-
-})
+});
+});
