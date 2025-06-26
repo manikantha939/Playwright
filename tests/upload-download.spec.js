@@ -1,10 +1,10 @@
-const { test,expect } = require("@playwright/test");
-const ExcelJs = require("exceljs");
+import { test, expect } from "@playwright/test";
+import { Workbook } from "exceljs";
 
 test.use({ acceptDownloads: true });
 
 async function writeExcelTest1(searchText, replaceText, change, filepath) {
-  const workbook = new ExcelJs.Workbook();
+  const workbook = new Workbook();
   await workbook.xlsx.readFile(filepath);
   const workSheet = await workbook.getWorksheet("Sheet1");
   const output = await readExcel(workSheet, searchText);

@@ -1,2 +1,3 @@
-let name1="mani"
+let message="Hello";
+message=2;
 console.log(name1)
